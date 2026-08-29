@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selected work — Camille Gruen</title>
+<meta name="description" content="Four things I built: internal tools, satellite data access, Rust ingest, and a live multi-cloud migration.">
+<meta name="author" content="Camille Gruen">
+<meta property="og:title" content="Selected work — Camille Gruen">
+<meta property="og:description" content="Four things I built, and who they were for.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F5F3F8'/><rect x='5' y='19' width='4' height='8' rx='1.5' fill='%233F4A7E'/><rect x='10' y='15' width='4' height='12' rx='1.5' fill='%237B7FB0'/><rect x='15' y='17' width='4' height='10' rx='1.5' fill='%23B492B8'/><rect x='20' y='9' width='4' height='18' rx='1.5' fill='%23DFA0A4'/><rect x='25' y='5' width='3' height='22' rx='1.5' fill='%23E9B78F'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="mark" href="index.html">Camille Gruen</a>
+    <nav aria-label="Sections">
+      <a href="index.html#experience">Experience</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head wrap">
+    <p class="eyebrow">Selected work</p>
+    <h1>Four things I built, and who they were for.</h1>
+    <p class="standfirst">
+      Longer form than a resume bullet. Each of these started as somebody being blocked,
+      and each is written up with the constraint that actually shaped the answer.
+    </p>
+  </section>
+
+  <div class="wrap">
+    <ol class="projects">
+
+      <li class="project rise" style="--node:var(--r4)">
+        <div class="project-top">
+          <span class="era" aria-hidden="true"></span>
+          <span class="co-name">Tomorrow.io</span>
+          <span class="meta" style="margin:0">2022 — 2024</span>
+        </div>
+        <h2>Getting myself off the critical path</h2>
+        <p class="context">
+          Research teams were waiting on infrastructure review for changes that were routine, and
+          data problems were being found late, by hand. Both were really the same problem: the
+          people closest to the work could not see or change the things they depended on. Adding
+          reviewers would have scaled the bottleneck, not removed it.
+        </p>
+        <h3>What I built</h3>
+        <ul class="did">
+          <li>A data validation UI that gave the team a direct view of integrity checks, which changed how operational work got done day to day.</li>
+          <li>Terraform packaged into reusable modules with automation scripts, making the common deployment paths safe by default so scientists and engineers could ship without me.</li>
+          <li>Enablement material for integration workflows, so adoption did not depend on someone remembering to explain it.</li>
+          <li>Add a sentence here about how adoption actually went, and what you would design differently.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="chips">
+          <li>React</li><li>Terraform</li><li>Python</li><li>Go</li>
+        </ul>
+      </li>
+
+      <li class="project rise" style="--node:var(--r5)">
+        <div class="project-top">
+          <span class="era" aria-hidden="true"></span>
+          <span class="co-name">Development Seed</span>
+          <span class="meta" style="margin:0">2025 — 2026</span>
+        </div>
+        <h2>One way in, for imagery from many satellites</h2>
+        <p class="context">
+          NASA buys imagery from commercial satellite operators and makes it available to
+          researchers. Every provider has its own tasking interface, delivery format, and latency
+          profile. No single integration is hard; making all of them behave like one coherent
+          thing for the scientist at the other end is.
+        </p>
+        <h3>What I built</h3>
+        <ul class="did">
+          <li>Optimizations to the tasking workflows and cloud infrastructure spanning multiple providers, improving how quickly and reliably researchers could get the data they asked for.</li>
+          <li>Add a sentence here about the specific bottleneck you found, and how you measured the improvement.</li>
+          <li>Add a sentence here about a tradeoff you made and why.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="chips">
+          <li>Python</li><li>Terraform</li><li>AWS</li><li>Docker</li>
+        </ul>
+      </li>
+
+      <li class="project rise" style="--node:var(--r4)">
+        <div class="project-top">
+          <span class="era" aria-hidden="true"></span>
+          <span class="co-name">Tomorrow.io</span>
+          <span class="meta" style="margin:0">2022 — 2025</span>
+        </div>
+        <h2>Rust ingest for global weather data</h2>
+        <p class="context">
+          Weather models publish on a fixed cadence, so the data arrives in bursts: quiet, then an
+          enormous worldwide volume all at once. Ingest had to absorb the spike without paying for
+          peak capacity through the quiet hours, and it had to be correct, because a silently
+          dropped observation surfaces later as a wrong forecast in front of a customer.
+        </p>
+        <h3>What I built</h3>
+        <ul class="did">
+          <li>Rust ingest applications and the shared internal libraries behind them, raising throughput and reliability across pipelines.</li>
+          <li>KEDA-based serverless scaling so capacity followed the publish cadence rather than peak load, later moved to ScaledJobs in GCP for further savings.</li>
+          <li>Datadog dashboards and observability practices that surfaced ingest failures before they reached forecasts.</li>
+          <li>Add a sentence here about why Rust specifically, and what it bought you over the previous implementation.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="chips">
+          <li>Rust</li><li>KEDA</li><li>GCP</li><li>Azure</li><li>Docker</li><li>Datadog</li>
+        </ul>
+      </li>
+
+      <li class="project rise" style="--node:var(--r4)">
+        <div class="project-top">
+          <span class="era" aria-hidden="true"></span>
+          <span class="co-name">Tomorrow.io</span>
+          <span class="meta" style="margin:0">2023 — 2025</span>
+        </div>
+        <h2>Moving a live platform between clouds</h2>
+        <p class="context">
+          Migrating a running platform from GCP to Azure while it keeps serving customers is
+          mostly a sequencing problem. The goal was a real multi-cloud foundation rather than a
+          lift-and-shift that reproduced the same coupling somewhere more expensive.
+        </p>
+        <h3>What I built</h3>
+        <ul class="did">
+          <li>Directed the migration end to end, establishing the multi-cloud foundation and modernizing legacy systems on the way through.</li>
+          <li>The observability that made the cutover measurable rather than a leap of faith.</li>
+          <li>Add a sentence here about how you sequenced it, and what your rollback story was.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="chips">
+          <li>Azure</li><li>GCP</li><li>Terraform</li><li>Datadog</li>
+        </ul>
+      </li>
+
+    </ol>
+  </div>
+
+  <div class="wrap">
+    <a class="backlink" href="index.html">&larr; Back to overview</a>
+  </div>
+
+</main>
+
+<footer class="wrap colophon">
+  <span>Camille Gruen · Denver, CO</span>
+  <span>Built and hosted on GitHub Pages</span>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rise');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
