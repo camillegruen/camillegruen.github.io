@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Selected work — Camille Gruen</title>
-<meta name="description" content="Four things I built: internal tools, satellite data access, Rust ingest, and a live multi-cloud migration.">
+<meta name="description" content="Two things I built: a weather and travel-planning app, and a live multi-cloud migration.">
 <meta name="author" content="Camille Gruen">
 <meta property="og:title" content="Selected work — Camille Gruen">
-<meta property="og:description" content="Four things I built, and who they were for.">
+<meta property="og:description" content="Two things I built, and what shaped them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -34,90 +34,43 @@
 
   <section class="page-head wrap">
     <p class="eyebrow">Selected work</p>
-    <h1>Four things I built, and who they were for.</h1>
+    <h1>Things I built, and what shaped them.</h1>
     <p class="standfirst">
-      Longer form than a resume bullet. Each of these started as somebody being blocked,
-      and each is written up with the constraint that actually shaped the answer.
+      Longer form than a resume bullet. One built on my own, one at work, each written up
+      with the constraint that actually decided the answer.
     </p>
   </section>
 
   <div class="wrap">
     <ol class="projects">
 
-      <li class="project rise" style="--node:var(--r4)">
+      <li class="project rise" style="--node:var(--r3)">
         <div class="project-top">
           <span class="era" aria-hidden="true"></span>
-          <span class="co-name">Tomorrow.io</span>
-          <span class="meta" style="margin:0">2022 — 2024</span>
+          <span class="co-name">Personal project</span>
         </div>
-        <h2>Getting myself off the critical path</h2>
+        <h2>Climate Quest</h2>
         <p class="context">
-          Research teams were waiting on infrastructure review for changes that were routine, and
-          data problems were being found late, by hand. Both were really the same problem: the
-          people closest to the work could not see or change the things they depended on. Adding
-          reviewers would have scaled the bottleneck, not removed it.
+          Checking the forecast for a trip tells you the weather but not what to do about it.
+          Climate Quest closes that gap: pick a place and a set of dates, and it returns the
+          conditions alongside a packing list derived from them &mdash; clothing, toiletries,
+          electronics &mdash; adjusted for the kind of travel and activity planned. Built end
+          to end, frontend and backend both.
         </p>
         <h3>What I built</h3>
         <ul class="did">
-          <li>A data validation UI that gave the team a direct view of integrity checks, which changed how operational work got done day to day.</li>
-          <li>Terraform packaged into reusable modules with automation scripts, making the common deployment paths safe by default so scientists and engineers could ship without me.</li>
-          <li>Enablement material for integration workflows, so adoption did not depend on someone remembering to explain it.</li>
-          <li>Add a sentence here about how adoption actually went, and what you would design differently.</li>
+          <li>A React frontend showing temperature, humidity, and wind speed, with unit toggles between Celsius and Fahrenheit and between m/s and mph, plus date pickers and location selection.</li>
+          <li>Interactive Plotly charts, including a choropleth, so conditions read as a picture rather than a table of numbers.</li>
+          <li>A FastAPI backend that pulls historical weather from the Tomorrow.io API, averages conditions across the date range, and derives the packing list from the result.</li>
+          <li>Graceful handling for cities without enough data, so the app says so rather than showing an empty chart.</li>
+          <li>Docker Compose orchestrating both services and Poetry managing Python dependencies, so the whole thing comes up with one command.</li>
         </ul>
         <h3>Stack</h3>
         <ul class="chips">
-          <li>React</li><li>Terraform</li><li>Python</li><li>Go</li>
+          <li>React</li><li>FastAPI</li><li>Python</li><li>Plotly</li><li>Material-UI</li><li>Docker</li>
         </ul>
-      </li>
-
-      <li class="project rise" style="--node:var(--r5)">
-        <div class="project-top">
-          <span class="era" aria-hidden="true"></span>
-          <span class="co-name">Development Seed</span>
-          <span class="meta" style="margin:0">2025 — 2026</span>
-        </div>
-        <h2>One way in, for imagery from many satellites</h2>
-        <p class="context">
-          NASA buys imagery from commercial satellite operators and makes it available to
-          researchers. Every provider has its own tasking interface, delivery format, and latency
-          profile. No single integration is hard; making all of them behave like one coherent
-          thing for the scientist at the other end is.
-        </p>
-        <h3>What I built</h3>
-        <ul class="did">
-          <li>Optimizations to the tasking workflows and cloud infrastructure spanning multiple providers, improving how quickly and reliably researchers could get the data they asked for.</li>
-          <li>Add a sentence here about the specific bottleneck you found, and how you measured the improvement.</li>
-          <li>Add a sentence here about a tradeoff you made and why.</li>
-        </ul>
-        <h3>Stack</h3>
-        <ul class="chips">
-          <li>Python</li><li>Terraform</li><li>AWS</li><li>Docker</li>
-        </ul>
-      </li>
-
-      <li class="project rise" style="--node:var(--r4)">
-        <div class="project-top">
-          <span class="era" aria-hidden="true"></span>
-          <span class="co-name">Tomorrow.io</span>
-          <span class="meta" style="margin:0">2022 — 2025</span>
-        </div>
-        <h2>Rust ingest for global weather data</h2>
-        <p class="context">
-          Weather models publish on a fixed cadence, so the data arrives in bursts: quiet, then an
-          enormous worldwide volume all at once. Ingest had to absorb the spike without paying for
-          peak capacity through the quiet hours, and it had to be correct, because a silently
-          dropped observation surfaces later as a wrong forecast in front of a customer.
-        </p>
-        <h3>What I built</h3>
-        <ul class="did">
-          <li>Rust ingest applications and the shared internal libraries behind them, raising throughput and reliability across pipelines.</li>
-          <li>KEDA-based serverless scaling so capacity followed the publish cadence rather than peak load, later moved to ScaledJobs in GCP for further savings.</li>
-          <li>Datadog dashboards and observability practices that surfaced ingest failures before they reached forecasts.</li>
-          <li>Add a sentence here about why Rust specifically, and what it bought you over the previous implementation.</li>
-        </ul>
-        <h3>Stack</h3>
-        <ul class="chips">
-          <li>Rust</li><li>KEDA</li><li>GCP</li><li>Azure</li><li>Docker</li><li>Datadog</li>
+        <ul class="links" style="margin-top:22px">
+          <li><a href="https://github.com/camillegruen/climate-quest">github.com/camillegruen/climate-quest &rarr;</a></li>
         </ul>
       </li>
 
@@ -137,7 +90,7 @@
         <ul class="did">
           <li>Directed the migration end to end, establishing the multi-cloud foundation and modernizing legacy systems on the way through.</li>
           <li>The observability that made the cutover measurable rather than a leap of faith.</li>
-          <li>Add a sentence here about how you sequenced it, and what your rollback story was.</li>
+          <!-- <li>Add a sentence here about how you sequenced it, and what your rollback story was.</li> -->
         </ul>
         <h3>Stack</h3>
         <ul class="chips">
