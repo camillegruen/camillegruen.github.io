@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Selected work — Camille Gruen</title>
-<meta name="description" content="Two things I built: a weather and travel-planning app, and a live multi-cloud migration.">
+<meta name="description" content="Three things I built: a weather and travel-planning app, a live multi-cloud migration, and a sound-reactive infinity table.">
 <meta name="author" content="Camille Gruen">
 <meta property="og:title" content="Selected work — Camille Gruen">
-<meta property="og:description" content="Two things I built, and what shaped them.">
+<meta property="og:description" content="Three things I built, and what shaped them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -34,10 +34,10 @@
 
   <section class="page-head wrap">
     <p class="eyebrow">Selected work</p>
-    <h1>Things I built, and what shaped them.</h1>
+    <h1>Three things I built, and what shaped them.</h1>
     <p class="standfirst">
-      Projects that I built end to end, or that I led from start to finish. 
-      <!-- Each one is a story of a problem, a solution, and the tradeoffs along the way. -->
+      Longer form than a resume bullet. Two built on my own, one at work, each written up
+      with the constraint that actually decided the answer.
     </p>
   </section>
 
@@ -53,7 +53,7 @@
         <p class="context">
           Checking the forecast for a trip tells you the weather but not what to do about it.
           Climate Quest closes that gap: pick a place and a set of dates, and it returns the
-          conditions alongside a packing list derived from them(clothing, toiletries,
+          conditions alongside a packing list derived from them (clothing, toiletries,
           electronics) adjusted for the kind of travel and activity planned. Built end
           to end, frontend and backend both.
         </p>
@@ -90,11 +90,40 @@
         <ul class="did">
           <li>Directed the migration end to end, establishing the multi-cloud foundation and modernizing legacy systems on the way through.</li>
           <li>The observability that made the cutover measurable rather than a leap of faith.</li>
-          <!-- <li>Add a sentence here about how you sequenced it, and what your rollback story was.</li> -->
+          <li>Add a sentence here about how you sequenced it, and what your rollback story was.</li>
         </ul>
         <h3>Stack</h3>
         <ul class="chips">
           <li>Azure</li><li>GCP</li><li>Terraform</li><li>Datadog</li>
+        </ul>
+      </li>
+
+
+      <li class="project rise" style="--node:var(--r2)">
+        <div class="project-top">
+          <span class="era" aria-hidden="true"></span>
+          <span class="co-name">Personal project</span>
+        </div>
+        <h2>Sound-reactive infinity table</h2>
+        <p class="context">
+          A coffee table with an infinity mirror in the base. An addressable LED loop sits
+          between a mirror and a two-way mirrored pane so the lights recede into a tunnel, and
+          the whole thing responds to sound in the room. It started as a display case for a
+          Lego Millennium Falcon with added flair. 
+        </p>
+        <h3>What I built</h3>
+        <ul class="did">
+          <li>Firmware that calibrates against the room at boot, sampling the ambient noise floor for a second and a half.</li>
+          <li>Automatic gain control so the light jumps on a beat and falls away gracefully instead of flickering.</li>
+          <li>A rainbow pulse that spins faster with fast tempo music.</li>
+          <li>Documented a bill of materials, wiring diagram, power budget for the 50-pixel strip, tuning constants, and a troubleshooting table for the failure modes I actually hit.</li>
+        </ul>
+        <h3>Stack</h3>
+        <ul class="chips">
+          <li>Arduino</li><li>C++</li><li>WS2812B</li><li>Adafruit NeoPixel</li><li>Hardware</li>
+        </ul>
+        <ul class="links" style="margin-top:22px">
+          <li><a href="https://github.com/camillegruen/sound-reactive-infinity-table">github.com/camillegruen/sound-reactive-infinity-table &rarr;</a></li>
         </ul>
       </li>
 
