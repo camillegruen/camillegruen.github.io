@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Camille Gruen</title>
-<meta name="description" content="Software engineer with eight years across user-facing surfaces, APIs, and the data pipelines that feed them, now moving toward product-focused work. Speaking at RustConf 2026.">
+<meta name="description" content="Eight years building data-heavy products across telecom infrastructure and startups — the interfaces, the APIs behind them, and the pipelines that feed both. Now moving toward product-focused work.">
 <meta name="author" content="Camille Gruen">
-<meta property="og:title" content="Camille Gruen — Software Engineer">
+<meta property="og:title" content="Camille Gruen">
 <meta property="og:description" content="I build products end to end, starting with the data.">
 <meta property="og:type" content="profile">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,11 +38,11 @@
     <p class="available"><span class="dot" aria-hidden="true"></span>Open to product-focused roles &middot; Denver, CO</p>
     <h1>Building products end to end, starting with the <em>data</em>.</h1>
     <p class="standfirst">
-      I have spent eight years building software across telecom infrastructure and startups, which taught me fairly different meanings of the word scale. 
-      I work on the interfaces, the APIs behind them, and the pipelines that feed both, and I am looking 
-      for a role that puts me closer to the people using what I build. 
+      Eight years building data-heavy products across telecom infrastructure and startups.
+      I work on the interfaces, the APIs behind them, and the pipelines that feed both, and I am looking
+      for a role that puts me closer to the people using what I build.
       <!-- Most recently at
-      <strong>Development Seed</strong>, on NASA&rsquo;s Commercial Satellite Data Program. -->
+      <strong>Development Seed</strong>, on NASA&rsquo;s Commercial Satellite Data Acquisition Program. -->
     </p>
 
     <div class="billing">
@@ -69,10 +69,12 @@
           <h3>Cloud Engineer</h3>
           <span class="co-name">Development Seed</span>
         </div>
-        <p class="meta">Sep 2025 — June 2026 · Remote</p>
-        <p class="about">Open-source geospatial and data technology services supporting NASA and NOAA programs.</p>
+        <p class="meta">Sep 2025 — Jun 2026</p>
+        <p class="about">Open-source geospatial and data technology supporting NASA and NOAA Earth observation programs.</p>
         <ul>
-          <li>Improved how researchers reach and receive satellite imagery on NASA&rsquo;s Commercial Satellite Data Acquisition Program, by optimizing the tasking workflows and cloud infrastructure spanning multiple commercial satellite providers.</li>
+          <li>Evaluated commercial Earth observation data for NASA&rsquo;s Commercial Satellite Data Acquisition Program, assessing imagery and sensor data quality, metadata completeness, and utility for Earth science, supporting decisions about which datasets and providers the program took on.</li>
+          <li>Worked on the back-end systems behind that assessment, standardizing how data from multiple commercial providers with differing interfaces and metadata models was checked and compared.</li>
+          <li>Improved how researchers find, request, and receive satellite imagery by reworking tasking workflows and cloud infrastructure.</li>
         </ul>
       </li>
 
@@ -81,28 +83,17 @@
           <h3>Senior Software Engineer</h3>
           <span class="co-name">Tomorrow.io</span>
         </div>
-        <p class="meta">Nov 2022 — Sep 2025 · Remote</p>
-        <p class="about">Customizable weather intelligence that helps organizations anticipate and manage weather impacts on their operations.</p>
+        <p class="meta">Nov 2022 — Sep 2025</p>
+        <p class="about">Weather intelligence helping organizations anticipate weather impacts on operations.</p>
         <ul>
-          <li>Owned ingestion, validation, and data-delivery systems end to end, working closely with engineering and data science on what shipped and in what order.</li>
-          <li>Wrote and delivered the technical enablement material behind integration workflows, so adopting the platform did not depend on tribal knowledge.</li>
-          <li>Ran sprint planning and daily standups, keeping alignment and execution consistent across the team.</li>
-          <li>Built and maintained the Rust ingest applications and shared internal libraries the platform runs on, raising throughput and reliability.</li>
-          <li>Directed the platform&rsquo;s migration from GCP to Azure and championed KEDA-based serverless scaling for high-volume global weather ingestion.</li>
-          <li>Built the Datadog dashboards and observability practices the team used to catch problems before customers did.</li>
+          <li>Owned ingestion, validation, and data delivery end to end, working with engineering and data science to set priorities and decide what shipped in what order.</li>
+          <li>Spotted a visibility gap in daily operations and shipped a data validation UI that became the team&rsquo;s primary window into data integrity, reshaping how the operational work got done.</li>
+          <li>Removed a standing dependency on infrastructure review by packaging Terraform into reusable modules and automation, letting scientists and engineers deploy their own work.</li>
+          <li>Directed the platform&rsquo;s migration from GCP to Azure and built internal buy-in for KEDA-based serverless scaling on high-volume global ingestion, later moving workloads to ScaledJobs as usage patterns changed.</li>
+          <li>Established the Datadog dashboards and observability practices the team relied on, so failures surfaced as shared metrics instead of customer complaints.</li>
+          <li>Ran sprint planning and daily standups, and wrote and delivered the technical enablement material behind integration workflows.</li>
+          <li>Stayed hands-on in the system: built and maintained the Rust ingest applications and shared libraries the platform runs on, and added RESTful Go endpoints to an internal notification service.</li>
         </ul>
-
-        <div class="subrole">
-          <!-- <p class="promo"><span class="arrow" aria-hidden="true">&uarr;</span>Promoted November 2022</p> -->
-          <h4>Software Engineer</h4>
-          <p class="meta">Jul 2022 — Nov 2022</p>
-          <ul>
-            <li>Designed and built a data validation UI that gave the team a direct view of data integrity and reshaped day-to-day operational workflows.</li>
-            <li>Packaged Terraform into reusable modules and automation scripts so scientists and engineers could deploy their own work without waiting on infrastructure review.</li>
-            <li>Added RESTful endpoints in Go to an internal notification system, and widened Datadog metric coverage across scientific pipelines.</li>
-            <li>Built Rust ingest applications that improved performance and resilience, and moved KEDA workloads to ScaledJobs in GCP, cutting cost.</li>
-          </ul>
-        </div>
       </li>
 
       <li class="role rise" style="--node:var(--r3)">
@@ -110,13 +101,13 @@
           <h3>Software Engineer</h3>
           <span class="co-name">Ordermark</span>
         </div>
-        <p class="meta">Oct 2021 — Jul 2022 · Remote</p>
-        <p class="about">Aggregated online ordering providers for restaurants and virtual kitchens into a single dashboard and printer.</p>
+        <p class="meta">Oct 2021 — Jul 2022</p>
+        <p class="about">Aggregated online ordering providers for restaurants and virtual kitchens into one dashboard and printer.</p>
         <ul>
-          <li>Built user profile accounts on Auth0, including the REST APIs other applications and services used to read and update profile objects.</li>
-          <li>Wrote the back-end logic in FastAPI and integrated SendGrid so the product could reach customers by email.</li>
-          <li>Built a queueing system for future ordering with the back-end team, on AWS S3, Lambda, CloudWatch Events, and CloudWatch Alarms.</li>
-          <li>Set up Cypress end-to-end testing as a node module running in GitHub Actions, and integrated 42Crunch for continuous automated API security.</li>
+          <li>Shipped user profile accounts on Auth0, including the REST APIs other applications and services depended on to read and update profile objects.</li>
+          <li>Built back-end logic in FastAPI and integrated SendGrid to give the product a direct channel to customers over email.</li>
+          <li>Partnered with the back-end team on a queueing system for future ordering on AWS S3, Lambda, CloudWatch Events, and CloudWatch Alarms.</li>
+          <li>Set up Cypress end-to-end testing in GitHub Actions and continuous automated API security with 42Crunch, so problems were caught before restaurants hit them.</li>
         </ul>
       </li>
 
@@ -128,9 +119,9 @@
         <p class="meta">Jan 2020 — Oct 2021 · Denver, CO</p>
         <p class="about">Telephone, internet, television, and mobile services.</p>
         <ul>
-          <li>Moved on-prem services to AWS, building the infrastructure for automation, monitoring, and continuous development.</li>
+          <li>Moved on-prem services to AWS and built the automation, monitoring, and continuous delivery infrastructure they ran on.</li>
           <li>Built and maintained automated CI/CD pipelines with CloudFormation, CodeBuild, CodeDeploy, Bitbucket, and Git.</li>
-          <li>Removed repeat work for other teams with reusable SNS topics that notified Slack and Teams from any project, and Python scripts that made processes self-healing.</li>
+          <li>Cut repeat work across teams with reusable SNS topics that notified Slack and Teams from any project, plus Python scripts that made recurring processes self-healing.</li>
         </ul>
       </li>
 
@@ -140,11 +131,10 @@
           <span class="co-name">Zayo Group</span>
         </div>
         <p class="meta">Jun 2018 — Jan 2020 · Boulder, CO</p>
-        <p class="about">Communication infrastructure services: fiber and bandwidth connectivity, colocation, and cloud infrastructure.</p>
+        <p class="about">Fiber and bandwidth connectivity, colocation, and cloud infrastructure.</p>
         <ul>
           <li>Built and maintained automated CI/CD pipelines using GitLab, Copado, and PowerShell.</li>
-          <li>Built test automation for infrastructure provisioning, and supported new and upgraded systems environments through automation tooling.</li>
-          <li>Managed GitLab repositories, permissions, branching, and tagging.</li>
+          <li>Built test automation for infrastructure provisioning and supported new and upgraded systems environments through automation tooling.</li>
         </ul>
       </li>
 
@@ -155,24 +145,46 @@
     <h2 class="section-label">Skills</h2>
 
     <div class="tier">
-      <p class="tier-name">Languages</p>
+      <p class="tier-name">Product</p>
       <ul class="chips">
-        <li>Python</li><li>Rust</li><li>SQL</li>
+        <li>Roadmapping and prioritization</li>
+        <li>Scoping and trade-off decisions</li>
+        <li>Technical specs and requirements</li>
+        <li>Discovery with internal users</li>
+        <li>Cross-functional alignment</li>
+        <li>Vendor and partner coordination</li>
+        <li>Agile delivery</li>
+        <li>Metrics and instrumentation</li>
+        <li>Technical enablement and documentation</li>
       </ul>
     </div>
 
     <div class="tier">
-      <p class="tier-name">Application layer</p>
+      <p class="tier-name">Languages</p>
+      <ul class="chips">
+        <li>Rust</li><li>Python</li><li>Go</li><li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <p class="tier-name">Application</p>
       <ul class="chips">
         <li>REST APIs</li><li>FastAPI</li><li>React</li><li>Auth0</li><li>Cypress</li><li>JSON</li>
       </ul>
     </div>
 
     <div class="tier">
-      <p class="tier-name">Infrastructure and delivery</p>
+      <p class="tier-name">Infrastructure</p>
       <ul class="chips soft">
         <li>Terraform</li><li>AWS</li><li>GCP</li><li>Azure</li><li>Docker</li>
         <li>KEDA</li><li>Datadog</li><li>Linux</li><li>Git</li><li>YAML</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <p class="tier-name">Tools</p>
+      <ul class="chips soft">
+        <li>Jira</li><li>Figma</li><li>Lucidchart</li>
       </ul>
     </div>
   </section>
