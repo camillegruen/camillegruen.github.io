@@ -168,8 +168,10 @@ a{ color:inherit; }
   color:var(--ink-2);
   margin:0;
 }
-.billing .conf-link{
-  display:inline-block;
+.billing .conf-link,
+.billing .youtube-link{
+  display:block;
+  width:fit-content;
   margin-top:16px;
   font-family:var(--mono);
   font-size:12.5px;
@@ -179,8 +181,12 @@ a{ color:inherit; }
   padding-bottom:3px;
   transition:border-color .15s;
 }
+.billing .youtube-link{ margin-top:8px; }
 .billing .conf-link:hover,
-.billing .conf-link:focus-visible{ border-bottom-color:var(--accent); }
+.billing .conf-link:focus-visible,
+.billing .youtube-link:hover,
+.billing .youtube-link:focus-visible{ border-bottom-color:var(--accent); 
+}
 
 .billing-date{
   text-align:right;
